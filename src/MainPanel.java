@@ -74,16 +74,6 @@ public class MainPanel extends JPanel implements ActionListener {
             return (Frame.symbol[2] == 'X' ? "X" : "O");
         return "";
     }
-
-    private void reset() {
-        Frame.player = "X";
-        for(int j = 0; j < Frame.isFree.length; j++)
-            Frame.isFree[j] = true;
-        for(int j = 0; j < Frame.buttons.length; j++)
-            Frame.buttons[j].setIcon(null);
-        for(int j = 0; j < Frame.symbol.length; j++)
-            Frame.symbol[j] = ' ';
-    }
     private void disableButtons() {
         for(int i = 0; i < Frame.buttons.length; i++)
             Frame.buttons[i].setEnabled(false);
